@@ -1,0 +1,20 @@
+.header {
+    position: relative;
+    z-index: 5;
+    padding-top: 37px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__button {
+        width: 240px;
+        height: 60px;
+    }
+
+    &__button-mobile {
+        display: none;
+    }
+}

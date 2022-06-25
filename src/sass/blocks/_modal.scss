@@ -1,0 +1,99 @@
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: transparent;
+    z-index: 50;
+}
+
+.modal {
+
+    &__dialog,
+    &__thanks {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        width: 1140px;
+        background-color: rgba(#fff, .3);
+        box-sizing: border-box;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    &__dialog {
+        padding: 60px 10px 73px 10px;
+    }
+
+    &__dialog-title,
+    &__thanks-title {
+        font-weight: 900;
+        font-size: 34px;
+        line-height: 41px;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+
+    &__dialog-descr,
+    &__thanks-descr {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 34px;
+        color: #FFC179;
+        margin-bottom: 25px;
+    }
+
+    &__thanks-descr {
+        margin-bottom: 35px;
+    }
+
+    &__dialog-form {
+        width: 487px;
+        margin: 0 auto;
+    }
+
+    &__dialog-input,
+    &__dialog-button {
+        width: 100%;
+        height: 60px;
+    }
+
+    &__dialog-input,
+    &__dialog-textarea {
+        padding: 18px 20px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        font-feature-settings: 'pnum', 'lnum';
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border: 1px solid #111419;
+        border-radius: 10px
+    }
+
+    &__dialog-input {
+        margin-bottom: 15px;
+    }
+
+    &__dialog-textarea {
+        width: 100%;
+        height: 103px;
+        resize: none;
+        margin-bottom: 20px;
+    }
+
+    &__dialog-close,
+    &__thanks-close {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        cursor: pointer;
+    }
+
+    &__thanks {
+        padding: 198px 0;
+    }
+}
