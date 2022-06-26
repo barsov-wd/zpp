@@ -51,6 +51,14 @@
             margin-left: 100px;
         }
     }
+
+    .modal {
+
+        &__dialog,
+        &__thanks {
+            width: 1040px;
+        }
+    }
 }
 
 @media (max-width: 1400px) {
@@ -91,6 +99,14 @@
             font-size: 32px;
         }
     }
+
+    .modal {
+
+        &__dialog,
+        &__thanks {
+            width: 1000px;
+        }
+    }
 }
 
 @media (max-width: 1300px) {
@@ -119,6 +135,14 @@
             margin-left: 75px;
         }
     }
+
+    .modal {
+
+        &__dialog,
+        &__thanks {
+            width: 940px;
+        }
+    }
 }
 
 @media (max-width: 1199px) {
@@ -127,7 +151,7 @@
     }
 
     .main {
-        min-height: 720px;
+        min-height: 100vh;
     }
 
     .promo {
@@ -151,6 +175,18 @@
 
         &___title {
             font-size: 28px;
+        }
+    }
+
+    .modal {
+
+        &__dialog,
+        &__thanks {
+            width: 800px;
+        }
+
+        &__thanks {
+            padding: 165px 0;
         }
     }
 }
@@ -190,6 +226,18 @@
         &__image-after {
             width: 285px;
             bottom: 40px;
+        }
+    }
+
+    .modal {
+
+        &__dialog,
+        &__thanks {
+            width: 700px;
+        }
+
+        &__thanks {
+            padding: 135px 0;
         }
     }
 }
@@ -239,6 +287,40 @@
             bottom: 65px;
         }
     }
+
+    .modal {
+
+        &__dialog,
+        &__thanks {
+            width: 500px;
+        }
+
+        &__thanks {
+            padding: 100px 0;
+        }
+
+        &__dialog-form {
+            width: 400px;
+        }
+
+        &__dialog-close,
+        &__thanks-close {
+            top: 20px;
+            right: 20px;
+        }
+
+        &__dialog-title,
+        &__thanks-title {
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        &__dialog-descr,
+        &__thanks-descr {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -263,11 +345,11 @@
             display: block;
             border: none;
             background: transparent;
+            cursor: pointer;
         }
     }
 
     .main {
-        min-height: 641px;
         padding-bottom: 34px;
     }
 
@@ -278,21 +360,32 @@
         &__subtitle-medium {
             font-size: 18px;
             line-height: 22px;
-            width: 100%;
+            width: 300px;
             padding: 0 10px;
             text-align: left;
             margin-bottom: 25px;
         }
 
         &__text {
-            width: 100%;
+            width: 300px;
             padding: 0 10px;
         }
 
         &__title {
+            position: relative;
             font-size: 20px;
             line-height: 24px;
             margin-bottom: 22px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 60px;
+                height: 100px;
+                right: -20px;
+                top: 10px;
+                background: url('../img/promo/promo-title-before.svg') center no-repeat;
+            }
         }
 
         &__image-after {
@@ -313,6 +406,58 @@
             width: 262px;
             height: 225px;
             margin-bottom: 18px;
+        }
+    }
+
+    .modal {
+        &__dialog {
+            padding: 50px 10px 35px;
+            width: 300px;
+        }
+
+        &__thanks {
+            padding: 71px 27px 50px;
+            width: 300px;
+        }
+
+        &__dialog-form {
+            width: 280px;
+        }
+
+        &__dialog-title,
+        &__thanks-title {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+
+        &__dialog-descr,
+        &__thanks-descr {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 25px;
+        }
+
+        &__dialog-input,
+        &__dialog-textarea {
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        &__dialog-close,
+        &__thanks-close {
+            top: 15px;
+            right: 15px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &__thanks-image {
+            width: 60px;
+            height: 60px;
         }
     }
 }
